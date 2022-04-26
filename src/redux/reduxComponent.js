@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from "./actions/";
+import { increment, decrement, reset } from "./actions/";
 
 function ReduxComponent() {
     const [count, setCount] = useState(0);
@@ -15,7 +15,10 @@ function ReduxComponent() {
             <button onClick={() => {
                 dispatch(decrement(count));
             }}>Decrement</button>
-            <h1>{selector}</h1>
+
+            <button onClick={() => {
+                dispatch(reset(count))
+            }}>Reset</button>
         </div>
     )
 }

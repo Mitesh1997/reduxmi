@@ -13,6 +13,11 @@ const CountReduser = (state = initialState, action) => {
                 ...state,
                 count: state.count - 1,
             }
+        case "Reset":
+            return {
+                ...state,
+                count: 0,
+            }
         default:
             return state
     }

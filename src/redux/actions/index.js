@@ -10,3 +10,8 @@ export const decrement = (count) => {
         payload: count
     }
 }
+export const reset = () => {
+    return {
+        type: "Reset"
+    }
+}
